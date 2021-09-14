@@ -3,6 +3,7 @@ package com.newtrip.designdemoproject.proxypattern.force;
 /**
  * @author : WinterSweett
  * @time : {DATE}
+ * 强制代理
  */
 class GamePlayerProxy implements IGamePlayer{
     private IGamePlayer iGamePlayer ;

@@ -3,8 +3,9 @@ package com.newtrip.designdemoproject.proxypattern.normal;
 /**
  * @author : WinterSweett
  * @time : {DATE}
+ * 普通代理,实现IProxy接口后，就拥有了自己的个性
  */
-class GamePlayerProxy implements IGamePlayer{
+class GamePlayerProxy implements IGamePlayer,IProxy{
     IGamePlayer iGamePlayer ;
     public GamePlayerProxy(String name){
         iGamePlayer = new GamPlayer(this,name);
@@ -23,5 +24,11 @@ class GamePlayerProxy implements IGamePlayer{
     @Override
     public void update() {
 this.iGamePlayer.update();
+count();
+    }
+
+    @Override
+    public void count() {
+        System.out.println("54$");
     }
 }
