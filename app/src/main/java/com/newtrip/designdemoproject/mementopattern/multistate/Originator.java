@@ -28,5 +28,10 @@ public class Originator {
     public void setState3(String state3) {
         this.state3 = state3;
     }
-    public M
+    public Memento createMemo(){
+        return new Memento(BeanUtils.backupProp(new BeanInfo()));
+    }
+    public void restoreMemo(Memento memento){
+        //BeanUtils.restoreProp(this,memento.getStateMap());
+    }
 }
